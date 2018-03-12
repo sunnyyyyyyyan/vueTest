@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue小练习</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- 第一部分 -->
+        <fieldset>
+            <legend>录入信息</legend>
+            <div>
+                <span>姓名：</span>
+                <input type="text" placeholder="请输入姓名" v-model="newPerson.name">
+            </div>
+            <div>
+                <span>年龄：</span>
+                <input type="text" placeholder="请输入年龄" v-model="newPerson.age">
+            </div>
+            <div>
+                <span>性别：</span>
+                <select v-model="newPerson.sex">
+                    <option value="man">man</option>
+                    <option value="woman">woman</option>
+                </select>
+            </div>
+            <div>
+                <span>手机：</span>
+                <input type="text" placeholder="请输入手机号码" v-model="newPerson.phone">
+            </div>
+            <button v-on:click="createPerson()">创建新用户</button>
+        </fieldset>
+
+        <!-- 第二部分 -->
+        <table>
+            <thead>
+            <tr>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>年龄</td>
+                <td>手机</td>
+                <td>删除</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in persons">
+                <td>{{item.name}}</td>
+                <td>{{item.sex}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.phone}}</td>
+                <td>
+                    <button @click="deletePerson(index)">删除</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

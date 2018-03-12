@@ -1,0 +1,22 @@
+#app{
+    margin: 50px auto;
+    width: 600px;
+}
+fieldset{
+    border: 1px solid orangered;
+    width: 400px;
+}
+fieldset input{
+    width: 100px;
+    height: 20px;
+    margin: 5px;
+}
+table{
+    margin-top: 30px;
+    text-align: center;
+    width: 400px;
+    border:1px solid orangered;
+}
+thead{
+    background-color: orangered;
+}

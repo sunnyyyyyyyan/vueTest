@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue_插槽</title>
+</head>
+<body>
+
+<div id="app">
+    <!--<my_slot></my_slot>-->
+    <!--<my_slot>
+        <p>hello sunny</p>
+        <img src="img/test.jpg" width="200">
+    </my_slot>-->
+
+    <my_computer>
+        <div slot="cpu">endiiS</div>
+        <div slot="gpu">hello</div>
+        <div slot="memory">sunny</div>
+        <div slot="hard-driver">day</div>
+    </my_computer>
+
+</div>
+
+<!--<template id="my_slot">   &lt;!&ndash;  匿名插槽 &ndash;&gt;
+    <div>
+        <h2 id="panel-head">插槽头部</h2>
+        　<slot>插槽部分，可被任意标签覆盖</slot>
+        <p id="panel-bottom">插槽底部</p>
+    </div>
+</template>-->
+
+<template id="my-computer">
+    <div>
+        <slot name="cpu">这里是插cpu的</slot>
+        <slot name="gpu">这里是插gpu的</slot>
+        <slot name="memory">这里是插memory的</slot>
+        <slot name="hard-driver">这里是插hard-driver的</slot>
+    </div>
+</template>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue_插槽.js"></script>
+
+</body>
+</html>

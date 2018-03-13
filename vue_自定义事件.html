@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue_自定义事件</title>
+</head>
+<body>
+    <div id="app">
+        <my_btn @total="allcount()"></my_btn>
+        <my_btn @total="allcount()"></my_btn>
+        <my_btn @total="allcount()"></my_btn>
+        <my_btn @total="allcount()"></my_btn>
+        <my_btn @total="allcount()"></my_btn>
+        <my_btn @total="allcount()"></my_btn>
+
+        <p>一共点击次数{{allCounter}}</p>
+    </div>
+
+    <template id="my_btn">
+        <div>
+            <button @click="count += 1">点击次数{{count}}</button>
+        </div>
+    </template>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue_自定义事件.js"></script>
+</body>
+</html>

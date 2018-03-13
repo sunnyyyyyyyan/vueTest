@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件之间的通信props</title>
+</head>
+<body>
+    <div id="app">
+        <my-sunny msg="hello sunny" imgsrc="img/test.jpg"></my-sunny>
+        <my-sunny msg="good day" imgsrc="img/part-1.jpg"></my-sunny>
+    </div>
+    <template id="my-sunny">
+        <div>
+            <p>{{msg}}</p>
+            <img :src="imgsrc" width="200">
+        </div>
+    </template>
+
+<script src="js/vue.js"></script>
+<script src="js/vue_组件通信.js"></script>
+</body>
+</html>

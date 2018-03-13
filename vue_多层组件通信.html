@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue_多层组件通信</title>
+</head>
+<body>
+<div id="app">
+    <my-parent :imgsrc="img" :imgtitle="title"></my-parent>
+</div>
+
+<template id="my-img">
+    <img src="imgsrc" width="200">
+</template>
+
+<template id="my-title">
+    <h2>{{title}}</h2>
+</template>
+
+
+<template id="my-parent">
+    <div>
+        <child1 :imgsrc="imgsrc"></child1>
+        <child2 :title="imgtitle"></child2>
+    </div>
+
+</template>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue_多层组件通信.js"></script>
+
+
+</body>
+</html>
